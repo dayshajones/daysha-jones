@@ -1,14 +1,24 @@
 import React from "react";
 import '../ProjectCard/ProjectCard.css';
+import {
+    Card,
+    Icon,
+    Image
+} from 'semantic-ui-react'
 
-import { Container, Header, Icon} from 'semantic-ui-react'
-
-const ProjectCard = ({title, url}) => {
+const ProjectCard = ({title, url, liveSite, img}) => {
     return (
-        <Container>
-            <Header as='h2'>{title}</Header>
+        <Card>
+            <Image src={img} alt={title} size='big'/>
+            <Card.Content>
+            <Card.Header as='h2'>{title}</Card.Header>
+            <br />
+            <br />
+            <a href={liveSite} target={liveSite}>live site</a>
+            <br />
             <a href={url} target={url}><Icon name='github' size='big' /></a>
-        </Container>
+            </Card.Content>
+        </Card>
     )
 
 }
