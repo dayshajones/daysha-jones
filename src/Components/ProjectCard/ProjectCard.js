@@ -1,24 +1,22 @@
 import React from "react";
 import '../ProjectCard/ProjectCard.css';
 import {
-    Card,
+    List,
     Icon,
     Image
 } from 'semantic-ui-react'
 
 const ProjectCard = ({title, url, liveSite, img}) => {
     return (
-        <Card>
-            <Image src={img} alt={title} size='big'/>
-            <Card.Content>
-            <Card.Header as='h2'>{title}</Card.Header>
-            <br />
-            <br />
+        // <Card className="project-card">
+        <List.Item>
+            <List.Content>
+            <List.Header as='h2'>{title}</List.Header>
             <a href={liveSite} target={liveSite}>live site</a>
-            <br />
-            <a href={url} target={url}><Icon name='github' size='big' /></a>
-            </Card.Content>
-        </Card>
+            <a href={url} target={url}><Icon name='github'/></a>
+            </List.Content>
+            <Image className="project-img" src={img} alt={title} size='big'/>
+        </List.Item>
     )
 
 }

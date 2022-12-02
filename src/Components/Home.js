@@ -1,11 +1,15 @@
 import React from "react";
 import ProjectsContainer from "./ProjectsContainer";
+import About from "./About";
+import { Container } from 'semantic-ui-react'
+// import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
-        <div>
+        <Container className="home">
+            <About />
             <ProjectsContainer />
-        </div>
+        </Container>
     )
 
 }
