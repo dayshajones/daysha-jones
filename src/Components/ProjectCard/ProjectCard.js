@@ -8,7 +8,6 @@ import {
 
 const ProjectCard = ({title, url, liveSite, img}) => {
     return (
-        // <Card className="project-card">
         <List.Item>
             <List.Content>
             <List.Header as='h2'>{title}</List.Header>

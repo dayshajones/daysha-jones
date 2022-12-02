@@ -1,11 +1,9 @@
 import React from "react";
 import { Container } from 'semantic-ui-react'
-import Fade from 'react-reveal/Fade';
 
 const About = () => {
     return (
         <Container className="about">
-            <Fade top>
             <div className="about-photo">
             <img src="daysha.jpeg" alt="daysha" />
             <img src="name.png" alt="dayshajones" />
@@ -17,7 +15,6 @@ const About = () => {
             Thrive in a fast-paced environment where I can contribute my problem-solving
             acumen and drive for excellence.
             </p>
-            </Fade>
         </Container>
     )
 }
